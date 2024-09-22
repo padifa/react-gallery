@@ -8,6 +8,10 @@ import { Container } from 'react-bootstrap';
 function App() {
     const [imageList, setImageList] = useState([
         { url: '/images/cheetah.jpg', title: 'Cheetah', description: 'My beautiful tiger', liked: false },
+        { url: '/images/Clever-Clair-150x150.jpg', title: 'Clever clair', description: 'The stylish Dog', liked: false },
+        { url: '/images/goat_small.jpg', title: 'Small goat', description: 'The attractive goat', liked: false },
+        { url: '/images/lezard.jpg', title: 'Lezard', description: 'Confident reptile', liked: false },
+        { url: '/images/Ruthie-Palm-150x150.jpg', title: 'Strange', description: 'I think he is scared', liked: false },
     ]);
 
     useEffect(() => {
@@ -23,10 +27,9 @@ function App() {
     };
 
     const handleImageLike = (image) => {
-        // Logic to update the "like" status for an image
         axios.put(`/api/gallery/${image.id}`)
             .then(() => {
-                fetchImageList(); // Refresh the list
+                fetchImageList(); 
             })
             .catch((error) => {
                 console.error('Error updating like status', error);
