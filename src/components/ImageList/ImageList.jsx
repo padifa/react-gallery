@@ -4,10 +4,10 @@ import GalleryImage from '../GalleryImage/GalleryImage.jsx';
 function ImageList({ imageList, fetchImageList, }) {
 
     const handleImageLike = (image) => {
-        // Logic to update the "like" status for an image
+       
         axios.put(`/api/gallery/${image.id}`)
             .then(() => {
-                fetchImageList(); // Refresh the list
+                fetchImageList(); 
             })
             .catch((error) => {
                 console.error('Error updating like status', error);
