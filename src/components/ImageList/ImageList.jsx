@@ -22,6 +22,7 @@ function ImageList({ imageList, fetchImageList, }) {
                     image={image} 
                     onImageLike={handleImageLike} 
                 />
+                
             ))}
         </Row>
     );
