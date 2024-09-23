@@ -9,6 +9,10 @@ function GalleryImage({ image, onImageLike }) {
         <Col>
             <Card>
                 <img src={image.url || "/images/goat_small.jpg"} alt={image.title || "Goat"} className="img-fluid"/>
+                <img src={image.url || '/images/Clever-Clair-150x150.jpg'} alt={image.title || 'Clever clair'} className="img-fluid"/>
+        <img src={ image.url ||'/images/goat_small.jpg'} alt={image.title ||'Small goat'} className="img-fluid"/>
+        <img src={ image.url ||'/images/lezard.jpg'} alt={image.title || 'Lezard'} className="img-fluid"/>
+        <img src={ image.url || '/images/Ruthie-Palm-150x150.jpg'} alt={image.title || 'Strange'} className="img-fluid"/>
                 <Card.Body>
                     <Card.Title>{image.title}</Card.Title> 
                     <Button 

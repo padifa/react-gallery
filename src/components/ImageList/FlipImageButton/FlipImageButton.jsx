@@ -8,6 +8,7 @@ function FlipImageButton({ image }) {
    
     const toggleFlip = () => {
         setFlipped(!flipped);
+        console.log
     };
 
     return (

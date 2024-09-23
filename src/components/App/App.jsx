@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from '../Header/Header';
+import Header from '../Header/Header.jsx';
 import { Container } from 'react-bootstrap';
 import FlipImageButton from '../ImageList/FlipImageButton/FlipImageButton.jsx';
 
