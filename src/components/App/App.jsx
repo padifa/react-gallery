@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from '../Header/Header.jsx';
+import Header from '../Header/Header';
+import ImageList from '../ImageList/ImageList.jsx';
 import { Container } from 'react-bootstrap';
-import FlipImageButton from '../ImageList/FlipImageButton/FlipImageButton.jsx';
+
+
 
 function App() {
     const [imageList, setImageList] = useState([
@@ -26,16 +28,29 @@ function App() {
             .catch((err) => console.error(`Error fetching gallery items`, err));
     };
 
+    const handleImageLike = (image) => {
+        axios.put(`/api/gallery/${image.id}`)
+            .then(() => {
+                fetchImageList(); 
+            })
+            .catch((error) => {
+                console.error('Error updating like status', error);
+
+            });
+    };
+
     return (
         <Container>
             <div className='App'>
                 <Header />
                 <main>
                     <p>My Images</p>
-                    {/* Map over imageList to render one FlipImageButton per image */}
-                    {imageList.map((image) => (
-                        <FlipImageButton key={image.title} image={image} />
-                    ))}
+                    <ImageList 
+                        imageList={imageList} 
+                        fetchImageList={fetchImageList} 
+                        onImageLike={handleImageLike} 
+                    />
+                
                 </main>
             </div>
         </Container>
