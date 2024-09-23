@@ -19,9 +19,9 @@ const handleLikeClick = (e) => {
         <Col>
             <Card onClick={toggleFlip} style={{ cursor: 'pointer'}}>
                 <img src={image.url || "/images/goat_small.jpg"} alt={image.title || "Goat"} className="img-fluid"
-                style={{ display: flipped ? 'none' : 'block' }} />
+                style={{ display: flipped ? 'none' : 'block', width: '400', height: '300px', objectFit: 'cover' }} />
                 <Card.Body style={{ display: flipped ? 'block' : 'none' }}>
-                    <Card.Title>{image.title}</Card.Title>
+                    <Card.Title>{image.description}</Card.Title>
  </Card.Body>
                     <Button 
                         className='mx-1' 
@@ -30,9 +30,10 @@ const handleLikeClick = (e) => {
                         onClick={handleLikeClick} 
                         style={{ position: 'absolute', bottom: '10px', right: '10px'}}>
                         {liked ? 'Liked' : 'Like'}
+                       
                     </Button>
                 
-                
+                    <p><h3>{image.title}</h3></p>
             </Card>
             
         </Col>
