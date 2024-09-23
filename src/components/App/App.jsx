@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../Header/Header';
 import ImageList from '../ImageList/ImageList.jsx';
 import { Container } from 'react-bootstrap';
+import GalleryImage from '../GalleryImage/GalleryImage.jsx';
 
 function App() {
     const [imageList, setImageList] = useState([
