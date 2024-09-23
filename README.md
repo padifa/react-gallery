@@ -1,9 +1,28 @@
-# Project Name
+# Image Gallery Application
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+## Overview
 
-## Description
+This is an image gallery application created by using React and Bootstrap. The application displays a collection of images, allows users to "like" images, and can flip the image to see its description.
 
-Your project description goes here. What problem did you solve? How did you solve it?
+## Features
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+- Display images with titles and descriptions.
+- Click to flip images and show their descriptions.
+- Like and unlike images.
+- Responsive design using Bootstrap.
+
+## Technologies Used
+
+- React
+- Bootstrap
+- Axios
+- CSS
+- Node.js
+- Javascript
+
+## Installation
+
+- Forked and cloned the repository from EDA's github page
+- installed npm
+- installed bootstrap
+- created the database
