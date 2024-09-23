@@ -28,12 +28,14 @@ const handleLikeClick = (e) => {
                         variant={liked ? 'success' : 'primary'} 
                         size="sm" 
                         onClick={handleLikeClick} 
-                        style={{ position: 'absolute', bottom: '10px', right: '10px'}}>
+                        style={{ position: 'absolute', bottom: '10px', right: '10px'}}
+                        data-testid="like-button">
                         {liked ? 'Liked' : 'Like'}
+                        
                        
                     </Button>
                 
-                    <p><h3>{image.title}</h3></p>
+                    <p><h3 data-testid="gallery-image-title">{image.title}</h3></p>
             </Card>
             
         </Col>

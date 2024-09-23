@@ -15,7 +15,7 @@ function ImageList({ imageList, fetchImageList, }) {
     };
 
     return (
-        <Row>
+        <Row data-testid="image-list">
             {imageList.map((image) => (
                 <GalleryImage 
                     key={image.id} 

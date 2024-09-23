@@ -40,7 +40,7 @@ function App() {
     };
 
     return (
-        <Container>
+        <Container data-testid="app-container">
             <div className='App'>
                 <Header />
                 <main>
